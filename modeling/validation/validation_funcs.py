@@ -9,7 +9,7 @@ def rng_int():
     return rng.integers(1, 10000)
 
 
-def plot_learning_curve(estimator, X, y, cv, scoring='accuracy'):
+def plot_learning_curve(estimator, X, y, cv, scoring='recall'):
     """
     
     """
@@ -25,7 +25,7 @@ def plot_learning_curve(estimator, X, y, cv, scoring='accuracy'):
     plt.figure()
     plt.title("Curva de Aprendizado")
     plt.xlabel("Tamanho do Conjunto de Treinamento")
-    plt.ylabel("Acurácia")
+    plt.ylabel("Revocação")
     plt.ylim(0.0, 1.1)
     plt.grid()
     
