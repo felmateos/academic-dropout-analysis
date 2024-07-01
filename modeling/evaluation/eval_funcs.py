@@ -15,7 +15,7 @@ def plot_confusion_matrix(best_model, X_test, y_test):
     cm_percent = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis] * 100
 
     plt.figure(figsize=(8, 6))
-    sns.heatmap(cm_percent, annot=True, fmt='.1f', cmap='BuPu')
+    sns.heatmap(cm_percent, annot=True, fmt='.1f', cmap='BuPu', xticklabels=best_model.classes_, yticklabels=best_model.classes_)
     plt.xlabel('Predicted')
     plt.ylabel('True')
     plt.title('Confusion Matrix Heatmap')
